@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WinFormsAppVisual/1.0.0": {
+        "dependencies": {
+          "BibliotecaDeClases": "1.0.0"
+        },
+        "runtime": {
+          "WinFormsAppVisual.dll": {}
+        }
+      },
+      "BibliotecaDeClases/1.0.0": {
+        "runtime": {
+          "BibliotecaDeClases.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WinFormsAppVisual/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BibliotecaDeClases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

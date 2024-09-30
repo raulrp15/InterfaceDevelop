@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="HolaNombre.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HolaNombre"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="244,241,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top" Height="63" Width="163" FontSize="40"/>
+        <TextBox Name="NombreUsu" Header="Escriba su nombre" HorizontalAlignment="Left" Margin="414,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="62" Width="326" TextChanged="TextBox_TextChanged" FontSize="40"/>
+        <Button Content="Enviar" FontSize="30" Margin="244,337,0,0" VerticalAlignment="Top" Height="49" Width="181" Click="Button_Click"/>
+    </Grid>
+</Page>

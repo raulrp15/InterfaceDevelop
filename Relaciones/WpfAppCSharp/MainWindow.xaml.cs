@@ -24,18 +24,23 @@ namespace WpfAppCSharp
 
         private void btnSaludar_Click(object sender, RoutedEventArgs e)
         {
-            ClsPersona persona = new ClsPersona(txtNombre.Text);
+            ClsPersona persona = new ClsPersona();
 
-            MessageBox.Show(
-                "Hola, " + persona.getNombre(),
+            if (!txtNombre.Text.Equals(""))
+            {
+                persona.Nombre = txtNombre.Text;
+
+                MessageBox.Show(
+                "Hola, " + persona.Nombre,
                 "Saludar",
                 MessageBoxButton.OK
                 );
-        }
-
-        private void Text_Change(object sender, TextChangedEventArgs e)
-        {
-
+            }
+            else
+            {
+                mError.Content = "No puede estar vacio";
+            }
+            
         }
     }
 }

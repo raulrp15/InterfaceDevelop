@@ -2,15 +2,41 @@
 {
     public class ClsPersona
     {
-        private String nombre = "";
-        public ClsPersona(String nombre)
+        #region Atributo
+        private string nombre;
+        private int edad;
+        private DateOnly fecha;
+        #endregion
+
+        #region Propiedades
+        public string Nombre
         {
-            this.nombre = nombre;
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public int Edad
+        {
+            get { return edad; }
+            set { edad = value; }
         }
 
-        public String getNombre()
+        public DateOnly Fecha
         {
-            return nombre;
+            get { return fecha; }
+            set { fecha = value; }
         }
+        #endregion
+
+        #region Constructores
+        public ClsPersona(string nombre)
+        {
+            Nombre = nombre;
+        }
+
+        public ClsPersona()
+        {
+
+        }
+        #endregion
     }
 }

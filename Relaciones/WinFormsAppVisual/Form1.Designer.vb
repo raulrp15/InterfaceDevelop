@@ -25,6 +25,7 @@ Partial Class Form1
         btnSaludar = New Button()
         Label1 = New Label()
         txtNombre = New TextBox()
+        mError = New Label()
         SuspendLayout()
         ' 
         ' btnSaludar
@@ -55,11 +56,22 @@ Partial Class Form1
         txtNombre.Size = New Size(241, 34)
         txtNombre.TabIndex = 2
         ' 
+        ' mError
+        ' 
+        mError.AutoSize = True
+        mError.Font = New Font("Segoe UI", 15F)
+        mError.ForeColor = Color.Red
+        mError.Location = New Point(390, 131)
+        mError.Name = "mError"
+        mError.Size = New Size(0, 28)
+        mError.TabIndex = 3
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(mError)
         Controls.Add(txtNombre)
         Controls.Add(Label1)
         Controls.Add(btnSaludar)
@@ -72,5 +84,6 @@ Partial Class Form1
     Friend WithEvents btnSaludar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtNombre As TextBox
+    Friend WithEvents mError As Label
 
 End Class

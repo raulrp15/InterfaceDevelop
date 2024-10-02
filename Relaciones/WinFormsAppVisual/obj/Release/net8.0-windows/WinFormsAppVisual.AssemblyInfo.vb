@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsAppVisual"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9aea3930baaa9d1d423ed882877173698debb61"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("WinFormsAppVisual"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("WinFormsAppVisual"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Relaciones"
+    "\\Relaciones",
+    "\\Relaciones\\WpfAppCSharp"
   ],
-  "SelectedNode": "\\Relaciones\\Relaciones.sln",
+  "SelectedNode": "\\Relaciones\\WpfAppCSharp\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

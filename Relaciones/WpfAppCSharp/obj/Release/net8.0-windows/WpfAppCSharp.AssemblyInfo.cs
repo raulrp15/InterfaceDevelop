@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WpfAppCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9aea3930baaa9d1d423ed882877173698debb61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e74c83176f6486e1f41bc17d03cfdd87f10aea")]
 [assembly: System.Reflection.AssemblyProductAttribute("WpfAppCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WpfAppCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

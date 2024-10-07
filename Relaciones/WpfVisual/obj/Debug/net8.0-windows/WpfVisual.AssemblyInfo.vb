@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("WpfVisual"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e74c83176f6486e1f41bc17d03cfdd87f10aea"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5eb70f13e487329a97305c9a70c506024fd8787d"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("WpfVisual"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("WpfVisual"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

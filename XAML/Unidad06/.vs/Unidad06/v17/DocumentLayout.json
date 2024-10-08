@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D01995-E365-487C-A4CE-CA8C06F8C5FF}|Ejercicio01\\Ejercicio01.csproj|c:\\users\\raulromerap\\desktop\\interfacedevelop\\xaml\\unidad06\\ejercicio01\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D01995-E365-487C-A4CE-CA8C06F8C5FF}|Ejercicio01\\Ejercicio01.csproj|solutionrelative:ejercicio01\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D01995-E365-487C-A4CE-CA8C06F8C5FF}|Ejercicio01\\Ejercicio01.csproj|c:\\users\\raulromerap\\desktop\\interfacedevelop\\xaml\\unidad06\\ejercicio01\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F0D01995-E365-487C-A4CE-CA8C06F8C5FF}|Ejercicio01\\Ejercicio01.csproj|solutionrelative:ejercicio01\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio01\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio01\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio01\\MainPage.xaml.cs",
+              "RelativeToolTip": "Ejercicio01\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T15:31:29.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio01\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Ejercicio01\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio01\\MainPage.xaml",
+              "RelativeToolTip": "Ejercicio01\\MainPage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-08T15:15:44.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

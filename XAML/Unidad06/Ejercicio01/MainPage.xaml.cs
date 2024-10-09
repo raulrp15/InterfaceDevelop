@@ -9,6 +9,11 @@ namespace Ejercicio01
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Funcion que crea un tercer botón cuando pulsas el boton 2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CrearBtn3(object sender, EventArgs e)
         {
             var boton3 = new Button
@@ -29,13 +34,20 @@ namespace Ejercicio01
             boton3.Clicked += CreaBtns;
 
             vertical.Children.Add(boton3);
+            btn2.Clicked -= CrearBtn3;
         }
 
+        /// <summary>
+        /// Funcion que cambia el texto del boton 2 y elimina el boton 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CreaBtns(object sender, EventArgs e)
         {
             vertical.Children.Remove(btn1);
             btn2.Text = "Crear controles en tiempo de ejecución mola";
-            btn2.Clicked -= CrearBtn3 ;
+            btn2.MaximumWidthRequest = 800;
+            
         }
          
     }

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio04.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <DatePicker x:Name="dpStart" 
+                        MinimumDate="{Binding Today}" />
+
+            <DatePicker x:Name="dpEnd"
+                        BindingContext="{x:Reference dpStart}"
+                        MinimumDate="{Binding Date}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

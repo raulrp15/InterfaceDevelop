@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\",
+  "WorkspaceRootPath": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7647393E-6A5D-478E-A10D-F2EAF5F71F60}|Ejercicio04\\Ejercicio04.csproj|c:\\users\\raulromerap\\desktop\\interfacedevelop\\xaml\\unidad06\\ejercicio04\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7647393E-6A5D-478E-A10D-F2EAF5F71F60}|Ejercicio04\\Ejercicio04.csproj|c:\\users\\rromera\\documents\\github\\interfacedevelop\\xaml\\unidad06\\ejercicio04\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7647393E-6A5D-478E-A10D-F2EAF5F71F60}|Ejercicio04\\Ejercicio04.csproj|solutionrelative:ejercicio04\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2D6DFF4-D7EF-40CF-A984-C71579CD71B4}|Ejercicio03\\Ejercicio03.csproj|c:\\users\\raulromerap\\desktop\\interfacedevelop\\xaml\\unidad06\\ejercicio03\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{24821082-9F6D-47ED-A9C2-059A5B415445}|Ejercicio02\\Ejercicio02.csproj|c:\\users\\rromera\\documents\\github\\interfacedevelop\\xaml\\unidad06\\ejercicio02\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{24821082-9F6D-47ED-A9C2-059A5B415445}|Ejercicio02\\Ejercicio02.csproj|solutionrelative:ejercicio02\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D6DFF4-D7EF-40CF-A984-C71579CD71B4}|Ejercicio03\\Ejercicio03.csproj|c:\\users\\rromera\\documents\\github\\interfacedevelop\\xaml\\unidad06\\ejercicio03\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A2D6DFF4-D7EF-40CF-A984-C71579CD71B4}|Ejercicio03\\Ejercicio03.csproj|solutionrelative:ejercicio03\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24821082-9F6D-47ED-A9C2-059A5B415445}|Ejercicio02\\Ejercicio02.csproj|c:\\users\\rromera\\documents\\github\\interfacedevelop\\xaml\\unidad06\\ejercicio02\\segundaparte.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{24821082-9F6D-47ED-A9C2-059A5B415445}|Ejercicio02\\Ejercicio02.csproj|solutionrelative:ejercicio02\\segundaparte.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +42,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SegundaParte.xaml",
+              "DocumentMoniker": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio02\\SegundaParte.xaml",
+              "RelativeDocumentMoniker": "Ejercicio02\\SegundaParte.xaml",
+              "ToolTip": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio02\\SegundaParte.xaml",
+              "RelativeToolTip": "Ejercicio02\\SegundaParte.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-11T09:58:50.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio03\\MainPage.xaml",
-              "RelativeDocumentMoniker": "Ejercicio03\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio03\\MainPage.xaml",
-              "RelativeToolTip": "Ejercicio03\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio02\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Ejercicio02\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio02\\MainPage.xaml",
+              "RelativeToolTip": "Ejercicio02\\MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-11T09:58:48.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio03\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Ejercicio03\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio03\\MainPage.xaml",
+              "RelativeToolTip": "Ejercicio03\\MainPage.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-09T15:30:27.018Z",
               "EditorCaption": ""
@@ -49,11 +83,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\MainPage.xaml",
               "RelativeDocumentMoniker": "Ejercicio04\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\MainPage.xaml",
               "RelativeToolTip": "Ejercicio04\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-09T14:42:40.379Z",
               "EditorCaption": ""

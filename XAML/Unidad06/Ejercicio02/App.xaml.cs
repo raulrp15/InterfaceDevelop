@@ -5,9 +5,9 @@
         public App()
         {
             InitializeComponent();
-            //MainPage = new NewPage1();
+            MainPage = new NewPage1();
 
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
         }
     }
 }

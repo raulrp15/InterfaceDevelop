@@ -7,8 +7,11 @@
         Padding="30"
         Spacing="25">
 
-        <Stepper></Stepper>
-        <Switch/>
+        <ActivityIndicator x:Name="aidCargaBarra"
+                           BindingContext="{x:Reference swtCambiaBarra}"
+                           IsRunning="{Binding Path= IsToggled}"/>
+        <Switch x:Name="swtCambiaBarra"
+                IsToggled="False"/>
 
     </VerticalStackLayout>
 </ContentPage>

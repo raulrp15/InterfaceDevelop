@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj": {}
+    "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj": {}
   },
   "projects": {
-    "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj": {
+    "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj",
+        "projectUniqueName": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj",
         "projectName": "Ejercicio04",
-        "projectPath": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj",
-        "packagesPath": "C:\\Users\\raulromerap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\raulromerap\\Desktop\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\obj\\",
+        "projectPath": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\Ejercicio04.csproj",
+        "packagesPath": "C:\\Users\\rromera\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rromera\\Documents\\GitHub\\InterfaceDevelop\\XAML\\Unidad06\\Ejercicio04\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\raulromerap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rromera\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -72,11 +72,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -115,11 +115,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -158,11 +158,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -202,11 +202,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.82, )"
+              "version": "[8.0.72, )"
             }
           },
           "imports": [

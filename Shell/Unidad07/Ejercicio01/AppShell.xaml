@@ -28,6 +28,12 @@
         <ShellContent Title="Neutrals"
                       Icon="neutrales.png"
                       ContentTemplate="{DataTemplate views:Neutrales}" />
+        <ShellContent Title="Configurations"
+                      Icon="settings.png"
+                      ContentTemplate="{DataTemplate views:Ajustes}" />
+        <ShellContent Title="Help"
+                      Icon="riddler.png"
+                      ContentTemplate="{DataTemplate views:Ajustes}" />
     </FlyoutItem>
 
 </Shell>

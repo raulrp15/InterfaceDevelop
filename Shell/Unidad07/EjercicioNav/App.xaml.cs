@@ -1,6 +1,4 @@
-﻿using EjercicioTagged.Views;
-
-namespace EjercicioTagged
+﻿namespace EjercicioNav
 {
     public partial class App : Application
     {
@@ -8,7 +6,7 @@ namespace EjercicioTagged
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new PaginaTabbed());
+            MainPage = new NavigationPage(new MainPage());
         }
     }
 }

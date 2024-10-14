@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioPasarDatos.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Entry x:Name="enName" Placeholder="Nombre"/>
+            <Entry x:Name="enSurnames" Placeholder="Apellidos"/>
+            <Button Clicked="btn_PasaTabbed"
+                    Text="Enviar"/>
+            <Button Clicked="btn_Pasa4"
+                    Text="Enviar pagina 4"/>
+            <Button Clicked="btn_Pasa5"
+                    Text="Enviar pagina 5"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

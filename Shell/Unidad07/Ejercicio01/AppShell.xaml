@@ -5,9 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Ejercicio01"
     xmlns:views="clr-namespace:Ejercicio01.Views"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="Ejercicio01">
 
+    <Shell.FlyoutHeader>
+        <Image Source="logoapp.png"
+               MaximumHeightRequest="200"/>
+    </Shell.FlyoutHeader>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Classics"
              Icon="famous.png">
@@ -28,12 +32,14 @@
         <ShellContent Title="Neutrals"
                       Icon="neutrales.png"
                       ContentTemplate="{DataTemplate views:Neutrales}" />
-        <ShellContent Title="Configurations"
-                      Icon="settings.png"
-                      ContentTemplate="{DataTemplate views:Ajustes}" />
-        <ShellContent Title="Help"
-                      Icon="riddler.png"
-                      ContentTemplate="{DataTemplate views:Ajustes}" />
+        
     </FlyoutItem>
+    <ShellContent Title="Help"
+                  Icon="riddler.png"
+                  ContentTemplate="{DataTemplate views:Ajustes}" />
+    
+    <ShellContent Title="Configurations"
+                  Icon="settings.png"
+                  ContentTemplate="{DataTemplate views:Ajustes}" />
 
 </Shell>

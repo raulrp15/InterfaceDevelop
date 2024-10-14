@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio01.Views.Heroes"
              Title="Heroes">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image Source="wwoman.png"/>
+            <Label 
+                Text="Wonder Woman"
+                FontAttributes="Bold"
+                FontSize="50"
+                HorizontalOptions="Center" />
+            <Image Source="america.png"/>
+            <Label 
+                Text="Captain America"
+                FontAttributes="Bold"
+                FontSize="50"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

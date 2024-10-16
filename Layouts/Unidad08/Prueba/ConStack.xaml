@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba.ConStack"
+             Title="ConStack">
+    <HorizontalStackLayout Spacing="10">
+        <Label Text="Primary Colors"/>
+        <VerticalStackLayout Spacing="5">
+            <BoxView BackgroundColor="Red"
+                     MinimumWidthRequest="50"
+                     MinimumHeightRequest="50"/>
+            <BoxView BackgroundColor="Yellow"
+                     MinimumWidthRequest="50"
+                     MinimumHeightRequest="50"/>
+            <BoxView BackgroundColor="Blue"
+                     MinimumWidthRequest="50"
+                     MinimumHeightRequest="50"/>
+        </VerticalStackLayout>
+        <Label Text="Secundary Colors"/>
+        <VerticalStackLayout Spacing="5">
+            <BoxView BackgroundColor="Green"
+                     MinimumWidthRequest="50"
+                     MinimumHeightRequest="50"/>
+            <BoxView BackgroundColor="Purple"
+                     MinimumWidthRequest="50"
+                     MinimumHeightRequest="50"/>
+            <BoxView BackgroundColor="Orange"
+                     MinimumWidthRequest="50"
+                     MinimumHeightRequest="50"/>
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+</ContentPage>

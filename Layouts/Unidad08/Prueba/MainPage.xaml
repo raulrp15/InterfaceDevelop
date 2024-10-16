@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Primary Colors"
+               Grid.Column="0"
+               Grid.RowSpan="2"/>
+        <BoxView BackgroundColor="Red"
+                 Grid.Column="1"
+                 Grid.Row="0"
+                 MaximumWidthRequest="50"
+                 MaximumHeightRequest="50"/>
+        <BoxView BackgroundColor="Yellow"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 MaximumWidthRequest="50"
+                 MaximumHeightRequest="50"/>
+        <BoxView BackgroundColor="Blue"
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 MaximumWidthRequest="50"
+                 MaximumHeightRequest="50"/>
+        <Label Text="Secundary Colors"
+               Grid.Column="2"
+               Grid.RowSpan="2"/>
+        <BoxView BackgroundColor="Green"
+                 Grid.Column="3"
+                 Grid.Row="0"
+                 MaximumWidthRequest="50"
+                 MaximumHeightRequest="50"/>
+        <BoxView BackgroundColor="Purple"
+                 Grid.Column="3"
+                 Grid.Row="1"
+                 MaximumWidthRequest="50"
+                 MaximumHeightRequest="50"/>
+        <BoxView BackgroundColor="Orange"
+                 Grid.Column="3"
+                 Grid.Row="2"
+                 MaximumWidthRequest="50"
+                 MaximumHeightRequest="50"/>
+    </Grid>
+
+</ContentPage>

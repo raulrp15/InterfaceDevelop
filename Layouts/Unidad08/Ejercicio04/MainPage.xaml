@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio04.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10">
+            <Border Stroke="Black"
+                    StrokeThickness="2">
+                <Label Text="Lorenzum Bellidum Ballenatum" Padding="0,0,0,10"/>
+            </Border>
+            <Border Stroke="Black"
+                    StrokeThickness="2">
+                <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
+                       Padding="0,0,0,20"/>
+            </Border>
+
+            <Border>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <FlexLayout Wrap="Wrap" Grid.Column="0">
+                        <Border HeightRequest="100"
+WidthRequest="100">
+                            <Image BackgroundColor="MistyRose"
+                                   HeightRequest="100"
+                                   WidthRequest="100"/>
+                        </Border>
+                        <Border HeightRequest="100"
+WidthRequest="100">
+                            <Image BackgroundColor="PowderBlue"
+                                   HeightRequest="100"
+                                   WidthRequest="100"/>
+                        </Border>
+                        <Border HeightRequest="100"
+WidthRequest="100">
+                            <Image BackgroundColor="Lavender"
+                                   HeightRequest="100"
+                                   WidthRequest="100"/>
+                        </Border>
+                    </FlexLayout>
+                    <FlexLayout Wrap="Wrap" Grid.Column="1" Margin="5,0">
+                        <Border Stroke="Black"
+                                StrokeThickness="2">
+                            <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
+                                   Padding="0,0,0,20"/>
+                        </Border>
+                        <Border Stroke="Black"
+                                StrokeThickness="2">
+                            <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
+                                   Padding="0,0,0,20"/>
+                        </Border>
+                        <Border Stroke="Black"
+                                StrokeThickness="2">
+                            <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
+                                   Padding="0,0,0,20"/>
+                        </Border>
+                        <Border Stroke="Black"
+                                StrokeThickness="2">
+                            <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
+                                   Padding="0,0,0,20"/>
+                        </Border>
+                    </FlexLayout>
+                </Grid>
+            </Border>
+
+            <Border Stroke="Black"
+                    StrokeThickness="2">
+                <Label Text=""
+                       Padding="0,0,0,20"/>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

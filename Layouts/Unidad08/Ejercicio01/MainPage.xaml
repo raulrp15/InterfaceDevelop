@@ -4,7 +4,7 @@
              x:Class="Ejercicio01.MainPage">
 
     <Border
-        Stroke="Black"
+        Stroke="Purple"
         StrokeThickness="5"
         StrokeShape="RoundRectangle 40,40,0,0"
         Margin="15">
@@ -13,14 +13,22 @@
             Spacing="25"
             HorizontalOptions="Center"
             VerticalOptions="Center">
-            <Button Text="Boton 1"/>
-            <Button Text="Boton 2"/>
-            <Button Text="Boton 3"/>
+            <Button Text="Boton 1" 
+                    BorderWidth="5" 
+                    BorderColor="Black" 
+                    Padding="10" 
+                    MaximumWidthRequest="80"/>
+            <Button Text="Boton 2" 
+                    MaximumWidthRequest="80"/>
+            <Button Text="Boton 3" 
+                    MaximumWidthRequest="80"/>
 
             <HorizontalStackLayout MinimumWidthRequest="200">
-                <Label Text="Nombre:"/>
+                <Label Text="Nombre:"
+                       Margin="10"/>
                 <Entry Placeholder="PLEISJOLDER"
-                       WidthRequest="200"/>
+                       WidthRequest="200"
+                       BackgroundColor="AliceBlue"/>
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </Border>

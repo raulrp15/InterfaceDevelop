@@ -21,7 +21,7 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <FlexLayout Wrap="Wrap" Grid.Column="0">
+                    <FlexLayout Wrap="Wrap" Grid.Column="0" Margin="0,0,5,0">
                         <Border HeightRequest="100"
 WidthRequest="100">
                             <Image BackgroundColor="MistyRose"
@@ -41,24 +41,20 @@ WidthRequest="100">
                                    WidthRequest="100"/>
                         </Border>
                     </FlexLayout>
-                    <FlexLayout Wrap="Wrap" Grid.Column="1" Margin="5,0">
-                        <Border Stroke="Black"
-                                StrokeThickness="2">
+                    <FlexLayout Wrap="Wrap" Grid.Column="1">
+                        <Border FlexLayout.Grow="1" Stroke="Black">
                             <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
                                    Padding="0,0,0,20"/>
                         </Border>
-                        <Border Stroke="Black"
-                                StrokeThickness="2">
+                        <Border FlexLayout.Grow="1" Stroke="Black">
                             <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
                                    Padding="0,0,0,20"/>
                         </Border>
-                        <Border Stroke="Black"
-                                StrokeThickness="2">
+                        <Border FlexLayout.Grow="1" Stroke="Black">
                             <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
                                    Padding="0,0,0,20"/>
                         </Border>
-                        <Border Stroke="Black"
-                                StrokeThickness="2">
+                        <Border FlexLayout.Grow="1" Stroke="Black">
                             <Label Text="Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum Lorenzum Bellidum Ballenatum"
                                    Padding="0,0,0,20"/>
                         </Border>

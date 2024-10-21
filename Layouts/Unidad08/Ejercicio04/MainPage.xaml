@@ -23,19 +23,19 @@
                     </Grid.ColumnDefinitions>
                     <FlexLayout Wrap="Wrap" Grid.Column="0" Margin="0,0,5,0">
                         <Border HeightRequest="100"
-WidthRequest="100">
+                                WidthRequest="100">
                             <Image BackgroundColor="MistyRose"
                                    HeightRequest="100"
                                    WidthRequest="100"/>
                         </Border>
                         <Border HeightRequest="100"
-WidthRequest="100">
+                                WidthRequest="100">
                             <Image BackgroundColor="PowderBlue"
                                    HeightRequest="100"
                                    WidthRequest="100"/>
                         </Border>
                         <Border HeightRequest="100"
-WidthRequest="100">
+                                WidthRequest="100">
                             <Image BackgroundColor="Lavender"
                                    HeightRequest="100"
                                    WidthRequest="100"/>

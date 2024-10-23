@@ -3,16 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio05UI.MainPage">
 
-    <ScrollView>
-        <ListView x:Name="lvPersona" ItemsSource="{Binding personas}" SeparatorVisibility="Default">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Nombre}"
-                              Detail="{Binding Apellidos}"
-                              />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ScrollView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout BackgroundColor="LightPink">
+                <ListView x:Name="lvPersona" ItemsSource="{Binding personas}" SeparatorVisibility="Default" 
+                          Background="White">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell>
+                                <TextCell.Text>
+                                    <MultiBinding StringFormat="{}{0} {1}">
+                                        <Binding Path="Nombre"/>
+                                        <Binding Path="Apellidos"/>
+                                    </MultiBinding>
+                                </TextCell.Text>
+                                <TextCell.Detail>
+                                    <Binding Path="Edad"/>
+                                </TextCell.Detail>
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <HorizontalStackLayout Spacing="100" HorizontalOptions="Center">
+                    <ImageButton Source="lapiz.png" 
+                                 HeightRequest="50" WidthRequest="50" 
+                                 HorizontalOptions="Start"
+                                 BackgroundColor="LightYellow"
+                                 Padding="10"
+                                 CornerRadius="30"/>
+                    <ImageButton Source="papelera.png" HeightRequest="50" WidthRequest="50" 
+                                 HorizontalOptions="Start"
+                                 BackgroundColor="LightYellow"
+                                 Padding="10"
+                                 CornerRadius="30"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+        <ImageButton Grid.Row="0" 
+                     Source="mas.png"
+                     HeightRequest="50" WidthRequest="50" 
+                     VerticalOptions="End" HorizontalOptions="End"
+                     BackgroundColor="LightYellow"
+                     Margin="40"
+                     Padding="10"
+                     CornerRadius="30"/>
+    </Grid>
+    
 
 </ContentPage>

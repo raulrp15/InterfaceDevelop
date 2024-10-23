@@ -6,7 +6,7 @@ namespace Ejercicio05UI
 {
     public partial class MainPage : ContentPage
     {
-        List<ClsPersona> personas = new();
+        List<ClsPersona> personas;
 
         public MainPage()
         {

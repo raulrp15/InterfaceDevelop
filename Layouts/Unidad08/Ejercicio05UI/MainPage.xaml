@@ -33,12 +33,14 @@
                                  HorizontalOptions="Start"
                                  BackgroundColor="LightYellow"
                                  Padding="10"
-                                 CornerRadius="30"/>
+                                 CornerRadius="30"
+                                 Margin="10"/>
                     <ImageButton Source="papelera.png" HeightRequest="50" WidthRequest="50" 
                                  HorizontalOptions="Start"
                                  BackgroundColor="LightYellow"
                                  Padding="10"
-                                 CornerRadius="30"/>
+                                 CornerRadius="30"
+                                 Margin="10"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </ScrollView>

@@ -9,7 +9,6 @@
         StrokeShape="RoundRectangle 40,40,0,0"
         Margin="15">
         <VerticalStackLayout
-            Padding="30,0"
             Spacing="25"
             HorizontalOptions="Center"
             VerticalOptions="Center">
@@ -17,17 +16,17 @@
                     BorderWidth="5" 
                     BorderColor="Black" 
                     Padding="10" 
-                    MaximumWidthRequest="80"/>
+                    />
             <Button Text="Boton 2" 
-                    MaximumWidthRequest="80"/>
+                    />
             <Button Text="Boton 3" 
-                    MaximumWidthRequest="80"/>
+                    />
 
             <HorizontalStackLayout MinimumWidthRequest="200">
                 <Label Text="Nombre:"
                        Margin="10"/>
                 <Entry Placeholder="PLEISJOLDER"
-                       WidthRequest="200"
+                       MinimumWidthRequest="220"
                        BackgroundColor="AliceBlue"/>
             </HorizontalStackLayout>
         </VerticalStackLayout>

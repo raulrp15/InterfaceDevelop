@@ -8,6 +8,9 @@ namespace Ejercicio05UI
     {
         List<ClsPersona> personas;
 
+        /// <summary>
+        /// Funcion que inicializa la vista y manda el listado a la listview
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();

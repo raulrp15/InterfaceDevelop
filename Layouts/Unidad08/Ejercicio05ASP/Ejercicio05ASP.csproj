@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ejercicio05DAL\Ejercicio05DAL.csproj" />
+    <ProjectReference Include="..\Ejercicio05ENT\Ejercicio05ENT.csproj" />
+  </ItemGroup>
+
+</Project>

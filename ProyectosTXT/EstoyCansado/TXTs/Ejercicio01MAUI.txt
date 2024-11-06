@@ -1,0 +1,23 @@
+﻿Capa ENT:
+	// Se encarga de crear las propiedades de los clientes
+	ClsPersona:
+		+ string Nombre {get; set;}
+		+ string Apellidos {get; set;}
+		+ DateTime FechaNac {get; set;}
+Capa DAL:
+	// Se encarga de crear una lista de personas
+	ClsListadoPersonasDAL:
+		+ static List<ClsPersona> GetListadoCompletoPersonas() : List<ClsPersona>
+Capa BL:
+	// Se encarga de poner ciertas normativas de la empresa
+	ClsListadoPersonasBL:
+		// Manda la mitad de la lista si es antes del jueves y la otra mitad si es despues
+		+ static List<ClsPersona> GetListadoPersonasSemana(): List<ClsPersona>
+Capa UI:
+	Model:
+		// Se encarga de crear una persona con un check
+		ClsPersonasCheck : ClsPersona
+			+ bool isChecked {get; set;}
+	ViewModel:
+		// Se encarga de hacer el modelo de la vista del listado de las personas
+		ListadoPersonasCheckVM : ClsListadoPersonasBL

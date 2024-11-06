@@ -1,0 +1,17 @@
+﻿Capa ENT:
+	// Se encarga de crear las propiedades de los clientes
+	ClsPersona:
+		+ string Nombre {get; set;}
+		+ string Apellidos {get; set;}
+		+ long IdDepartamento {get; set;}
+
+	// Se encarga de crear las propiedades de los apartamentos
+	ClsDepartamento:
+		+ long Id {get;}
+		+ string Nombre {get; set;}
+Capa DAL:
+	
+Capa BL:
+	
+Capa UI:
+	

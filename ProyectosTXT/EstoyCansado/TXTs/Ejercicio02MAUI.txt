@@ -10,7 +10,8 @@
 		+ long Id {get;}
 		+ string Nombre {get; set;}
 Capa DAL:
-	
+	ClsListadoDAL:
+		+ static List<ClsDepartamento> GetListadoDepartamentos(): 
 Capa BL:
 	
 Capa UI:

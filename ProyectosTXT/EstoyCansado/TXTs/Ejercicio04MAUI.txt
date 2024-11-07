@@ -1,0 +1,24 @@
+﻿Capa ENT
+	ClsDia:
+		+ DateTime Fecha {get;}
+		+ int Temperatura {get; set;}
+		+ string Clima {get; set;}
+		+ int PorcentajeAgua {get; set;}
+		+ int PresionAtmos {get; set;}
+
+Capa DAL
+	ClsListadoDAL:
+		+ static List<ClsDia> GetListaCompletaDiasDAL()
+
+Capa BL
+	ClsListadoBL:
+		+ static List<ClsDia> GetListaSemanalDiasBL()
+		+ static ClsDia GetDetallesDiaPorFechaBL(DateTime fecha)
+
+Capa UI
+	ListadoDiasDetallesVM:
+		+ List<ClsDia> ListaDiasSem {get; set;}
+		+ ClsDia DiaSelect {get; set;}
+
+		+ ListadoDiasDetallesVM()
+		+ GetDetallesDiaPorFechaVM(DateTime fecha)

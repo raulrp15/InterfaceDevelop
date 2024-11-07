@@ -3,16 +3,33 @@
 	ClsPersona:
 		+ string Nombre {get; set;}
 		+ string Apellidos {get; set;}
-		+ long IdDepartamento {get; set;}
+		+ int IdDepartamento {get;}
 
 	// Se encarga de crear las propiedades de los apartamentos
 	ClsDepartamento:
-		+ long Id {get;}
+		+ int Id {get;}
 		+ string Nombre {get; set;}
 Capa DAL:
+	// Se encarga de crear una lista de Personas y otra de Departamentos
 	ClsListadoDAL:
-		+ static List<ClsDepartamento> GetListadoDepartamentos(): 
+		+ static List<ClsDepartamento> GetListadoDepartamentosDAL()
+		+ static List<ClsPersona> GetListadoPersonasDAL()
+		+ static List<ClsPersona> GetListadoPersonasPorIdDeptDAL(idDept)
 Capa BL:
-	
+	// Se encarga de crear una lista de departamentos con normativas de la empresa,
+	// una lista de personas que pertenecen a ese departamento y contar las personas que hay en él
+	ClsListadoBL:
+		+ static List<ClsDepartamento> GetListadoDepartamentosBL()
+		+ static List<ClsPersona> GetListadoPersonasPorIdDeptBL(idDept)
+		+ static int ContarPersonasDepartamento(idDept)
 Capa UI:
-	
+	// Se encarga de crear un modelo para la vista de la aplicacion
+	ViewModel:
+		ListadoDepartamentoPersonaVM
+			+ List<ClsDepartamento> listaDept {get; set;}
+			+ List<ClsPersona> listaPers {get; set;}
+			+ int NumPers {get; set;}
+			// El constructor se encargará de guardar la lista de departamentos en la propiedad correspondiente
+			+ ListadoDepartamentoPersonaVM(): Constructor
+			// Esta funcion se encargará de guardar en las propiedades la lista de personas del departamento y el numero de estas
+			+ ObtenerPersonasPorDept(idDept)

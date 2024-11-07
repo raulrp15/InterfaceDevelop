@@ -1,0 +1,32 @@
+﻿Capa ENT:
+	ClsMarca:
+		+ int Id {get;}
+		+ string Nombre {get; set;}
+
+	ClsModelo:
+		+ int Id {get;}
+		+ string Nombre {get; set;}
+		+ int IdMarca {get;}ç
+
+Capa DAL:
+	ClsListadosDAL:
+		+ static List<ClsMarca> GetListadoMarcasCompletoDAL()
+		+ static List<ClsModelo> GetListadoModelosCompletoDAL()
+		+ static List<ClsModelo> GetListadoModelosPorMarcaIdDAL(idMarca)
+
+Capa BL:
+	// Se encarga de recoger y crear una lista con las normativas de la empresa
+	ClsListadosBL:
+		+ static List<ClsMarca> GetListadoMarcasCompletoBL()
+		+ static List<ClsModelo> GetListadoModelosPorMarcaIdBL(idMarca)
+
+Capa UI:
+	// Se encarga de realizar el modelo para la vista
+	ListadoMarcaModeloVM:
+		+ List<ClsMarca> ListaMarcas {get; set;}
+		+ List<ClsModelo> ListaModelos {get; set;}
+
+		// El constructor se encargará de guardar la lista de departamentos en la propiedad correspondiente
+		+ ListadoMarcaModeloVM(): Constructor
+		// Funcion que guarda la lista de modelos segun la marca seleccionada en la propiedad correspodiente
+		+ GetModelosPorMarcaIdVM(idMarca)

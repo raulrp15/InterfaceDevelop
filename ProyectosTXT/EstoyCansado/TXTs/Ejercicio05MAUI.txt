@@ -1,0 +1,6 @@
+﻿Capa ENT
+	Cls
+
+Capa DAL
+Capa BL
+Capa UI

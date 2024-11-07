@@ -1,6 +1,7 @@
 ﻿Capa ENT:
 	// Se encarga de crear las propiedades de los clientes
 	ClsPersona:
+		+ int Id {get;}
 		+ string Nombre {get; set;}
 		+ string Apellidos {get; set;}
 		+ DateTime FechaNac {get; set;}
@@ -20,4 +21,6 @@ Capa UI:
 			+ bool isChecked {get; set;}
 	ViewModel:
 		// Se encarga de hacer el modelo de la vista del listado de las personas
-		ListadoPersonasCheckVM : ClsListadoPersonasBL
+		ListadoPersonasCheckVM:
+			+ List<ClsPersona> Lista {get; set;}
+			+ ClsPersonaCheck PersonaCheck {get;}

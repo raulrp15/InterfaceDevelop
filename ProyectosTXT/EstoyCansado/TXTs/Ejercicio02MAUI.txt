@@ -22,13 +22,39 @@ Capa BL:
 		+ static List<ClsPersona> GetListadoPersonasPorIdDeptBL(idDept)
 		+ static int ContarPersonasDepartamento(idDept)
 Capa UI:
+	MAUI
 	// Se encarga de crear un modelo para la vista de la aplicacion
 	ViewModel:
 		ListadoDepartamentoPersonaVM
-			+ List<ClsDepartamento> listaDept {get; set;}
-			+ List<ClsPersona> listaPers {get; set;}
+			+ List<ClsDepartamento> ListaDept {get;}
+			+ List<ClsPersona> ListaPers {get;}
+			+ ClsDepartamento DeptSelect {get; set;}
 			+ int NumPers {get; set;}
 			// El constructor se encargará de guardar la lista de departamentos en la propiedad correspondiente
 			+ ListadoDepartamentoPersonaVM(): Constructor
 			// Esta funcion se encargará de guardar en las propiedades la lista de personas del departamento y el numero de estas
 			+ ObtenerPersonasPorDept(idDept)
+	ASP
+		ListadoPersonaDepartamentoVM
+			+ List<ClsDepartamento> ListaDept {get;}
+			+ List<ClsPersona> ListaPers {get;}
+			+ int NumPers {get;}
+
+			+ ListadoPersonaDepartamentoVM()
+				// Cargar la lista de departamentos en la propiedad ListaDept
+				{
+					ListaDept = ClsListadoBL.GetListadoDepartamentosBL(id)
+				}
+			+ ListadoPersonaDepartamentoVM(int id) : base()
+				{
+					ListaPers = ClsListadoBL.GetListadoPersonasPorIdDeptBL(id)
+					NumPers = ClsListadoBL.ContarPersonasDepartamento(id)
+				}
+
+		Controllers
+			ListaPersona()
+				return View(new ClsListadoPersonaDepartamentoVM)
+
+			[HttpPost]
+			ListaPersona(int id)
+				return View(new ClsListadoPersonaDepartamentoVM)

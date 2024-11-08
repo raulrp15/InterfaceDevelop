@@ -18,7 +18,9 @@ Capa UI:
 	Model:
 		// Se encarga de crear una persona con un check
 		ClsPersonasCheck : ClsPersona
-			+ bool isChecked {get; set;}
+			+ bool IsChecked {get;}
+			- bool EsMayorEdad()
+
 	ViewModel:
 		// Se encarga de hacer el modelo de la vista del listado de las personas
 		ListadoPersonasCheckVM:

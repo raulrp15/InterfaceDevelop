@@ -13,7 +13,6 @@ Capa DAL:
 	// Se encarga de crear una lista de Personas y otra de Departamentos
 	ClsListadoDAL:
 		+ static List<ClsDepartamento> GetListadoDepartamentosDAL()
-		+ static List<ClsPersona> GetListadoPersonasDAL()
 		+ static List<ClsPersona> GetListadoPersonasPorIdDeptDAL(idDept)
 Capa BL:
 	// Se encarga de crear una lista de departamentos con normativas de la empresa,

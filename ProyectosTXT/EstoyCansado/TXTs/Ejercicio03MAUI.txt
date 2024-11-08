@@ -6,7 +6,7 @@
 	ClsModelo:
 		+ int Id {get;}
 		+ string Nombre {get; set;}
-		+ int IdMarca {get;}ç
+		+ int IdMarca {get;}
 
 Capa DAL:
 	ClsListadosDAL:

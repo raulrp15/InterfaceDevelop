@@ -20,5 +20,5 @@ Capa UI
 		+ List<ClsDia> ListaDiasSem {get; set;}
 		+ ClsDia DiaSelect {get; set;}
 
-		+ ListadoDiasDetallesVM()
+		+ ListadoDiasDetallesVM() // Constructor
 		+ GetDetallesDiaPorFechaVM(DateTime fecha)

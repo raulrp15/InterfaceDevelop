@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vmodel="clr-namespace:Ejercicio04UI.ViewModels"
+             x:Class="Ejercicio04UI.MainPage">
+    <ContentPage.BindingContext>
+        <vmodel:TrolearVM/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <Entry Placeholder="Nombre" Text="{Binding Nombre}"/>
+        <Entry Placeholder="Apellidos" Text="{Binding Apellidos}"/>
+    </VerticalStackLayout>
+
+</ContentPage>

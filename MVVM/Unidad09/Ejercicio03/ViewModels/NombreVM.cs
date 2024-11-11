@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ejercicio03ENT;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio03.ViewModels
 {
-    public class NombreVM : Ejercicio03ENT.ClsPersona
+    public class NombreVM : INotifyPropertyChanged
     {
+        private string nombre;
+
         public string Nombre
         {
             get { return nombre; }

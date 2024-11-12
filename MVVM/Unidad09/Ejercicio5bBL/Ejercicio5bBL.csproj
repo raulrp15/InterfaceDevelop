@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ejercicio5bDAL\Ejercicio5bDAL.csproj" />
+    <ProjectReference Include="..\Ejercicio5bENT\Ejercicio5bENT.csproj" />
+  </ItemGroup>
+
+</Project>

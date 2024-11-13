@@ -6,13 +6,20 @@ namespace Ejercicio5bBL
     public class ClsListadoBL
     {
         /// <summary>
-        /// 
+        /// Funcion que devuelve una lista de personas
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de personas</returns>
         public static List<ClsPersona> GetListadoPersonaBL()
         {
-            List<ClsPersona> lista = ClsListadoDAL.GetListadoPersonasDAL();
-
+            List<ClsPersona> lista = null;
+            try
+            {
+                lista = ClsListadoDAL.GetListadoPersonasDAL();
+            }
+            catch (Exception ex)
+            {
+                //TODO Enviar mensaje de error
+            }
             return lista;
         }
     }

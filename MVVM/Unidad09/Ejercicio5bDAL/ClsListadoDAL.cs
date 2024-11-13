@@ -5,9 +5,9 @@ namespace Ejercicio5bDAL
     public class ClsListadoDAL
     {
         /// <summary>
-        /// 
+        /// Funcion que devuelve una lista de personas
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de personas</returns>
         public static List<ClsPersona> GetListadoPersonasDAL()
         {
             return new List<ClsPersona>

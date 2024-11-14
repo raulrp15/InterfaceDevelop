@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vmodel="clr-namespace:Ejercicio01UI.ViewModels"
+             x:Class="Ejercicio01UI.MainPage">
+
+    <ContentPage.BindingContext>
+        <vmodel:ListadoPersonaVM/>
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Grid.Row="0" HorizontalOptions="Center">
+            <Entry Placeholder="Buscar" MinimumWidthRequest="200" Text="{Binding Busqueda}" MaximumHeightRequest="50"/>
+            <Button Padding="10"
+                    ImageSource="lupa.png"
+                    Command="{Binding BusquedaCommand}"
+                    IsEnabled="{Binding BusquedaCommand.CanExecute}"
+                    HeightRequest="50" WidthRequest="50" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="20" Grid.Row="1" HorizontalOptions="Center">
+            <ListView ItemsSource="{Binding Listado}" SelectedItem="{Binding PersonaSelect}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--<Border Stroke="Black" StrokeShape="RoundRectangle 10,10,10,10" Margin="10" Padding="5">
+                                <HorizontalStackLayout Spacing="5">
+                                    <Border Stroke="Black" StrokeShape="RoundRectangle 50,50,50,50">
+                                        <Image Source="{Binding Url_foto}" HeightRequest="60" WidthRequest="60" Aspect="AspectFill"/>
+                                    </Border>
+                                    <Label Text="{Binding Nombre}" VerticalOptions="Center"/>
+                                    <Label Text="{Binding Apellidos}" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                            </Border>-->
+                            <Grid Padding="10" ColumnSpacing="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border StrokeShape="RoundRectangle 30,30,30,30" Stroke="Black" StrokeThickness="2">
+                                    <Image Source="{Binding Url_foto}" HeightRequest="60" WidthRequest="60" Aspect="AspectFill" Grid.Column="0" />
+                                </Border>
+                                <Label Text="{Binding Nombre}" VerticalOptions="Center" Grid.Column="1"/>
+                                <Label Text="{Binding Apellidos}" VerticalOptions="Center" Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </HorizontalStackLayout>
+        <Button Grid.Row="1" 
+            ImageSource="papelera.png" 
+            HeightRequest="50" WidthRequest="50" 
+            HorizontalOptions="End" VerticalOptions="End"
+            Margin="0,0,10,10"
+            Command="{Binding EliminarCommand}"
+            IsEnabled="{Binding EliminarCommand.CanExecute}"/>
+    </Grid>
+
+</ContentPage>

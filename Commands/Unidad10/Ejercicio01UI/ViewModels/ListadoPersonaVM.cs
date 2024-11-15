@@ -12,19 +12,18 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01UI.ViewModels
 {
-    public class ListadoPersonaVM
+    public class ListadoPersonaVM : INotifyPropertyChanged
     {
         #region Atributo
-        private ObservableCollection<ClsPersona> listado;
+        private ObservableCollection<ClsPersona> listadoBase;
         private ClsPersona persona_select;
         private string busqueda = "";
+        private ObservableCollection<ClsPersona> listado;
+        private DelegateCommand eliminarCommand;
+        private DelegateCommand buscarCommand;
         #endregion
 
         #region Propiedades
-        public ObservableCollection<ClsPersona> Listado 
-        { 
-            get { return listado; } 
-        }
         public ClsPersona PersonaSelect 
         { 
             get { return persona_select; } 
@@ -33,8 +32,9 @@ namespace Ejercicio01UI.ViewModels
                 persona_select = value; 
                 NotifyPropertyChanged("PersonaSelect");
                 EliminarCommand.RaiseCanExecuteChanged();
-            } 
+            }
         }
+        public ObservableCollection<ClsPersona> Listado { get { return listado; } }
         public string Busqueda 
         { 
             get { return busqueda; } 
@@ -43,18 +43,14 @@ namespace Ejercicio01UI.ViewModels
                 busqueda = value;
                 if (string.IsNullOrEmpty(busqueda))
                 {
-                    listado.Clear();
-                    foreach (ClsPersona persona in ClsListadoBL.GetListadoPersonaBL())
-                    {
-                        listado.Add(persona);
-                    }
+                    listado = listadoBase;
                 }
-                NotifyPropertyChanged("Busqueda");
+                NotifyPropertyChanged("Listado");
                 BusquedaCommand.RaiseCanExecuteChanged();
             } 
         }
-        public DelegateCommand EliminarCommand { get; }
-        public DelegateCommand BusquedaCommand { get; }
+        public DelegateCommand EliminarCommand { get { return eliminarCommand; } }
+        public DelegateCommand BusquedaCommand { get { return buscarCommand; } }
         #endregion
 
         #region Constructores
@@ -65,15 +61,16 @@ namespace Ejercicio01UI.ViewModels
         {
             try
             {
-                listado = new ObservableCollection<ClsPersona>(ClsListadoBL.GetListadoPersonaBL());
+                listadoBase = new ObservableCollection<ClsPersona>(ClsListadoBL.GetListadoPersonaBL());
+                listado = listadoBase;
             }
             catch (Exception ex)
             {
                 // TODO Enviar mensaje de error
             }
 
-            EliminarCommand = new DelegateCommand(EliminaPersonaSelect, PuedeEliminarPersonaSelect);
-            BusquedaCommand = new DelegateCommand(BuscaPersona, PuedeBuscarPersona);
+            eliminarCommand = new DelegateCommand(EliminaPersonaSelect, PuedeEliminarPersonaSelect);
+            buscarCommand = new DelegateCommand(BuscaPersona, PuedeBuscarPersona);
         }
         #endregion
 
@@ -89,13 +86,13 @@ namespace Ejercicio01UI.ViewModels
             {
                 if (PersonaSelect != null)
                 {
+                    listadoBase.Remove(PersonaSelect);
                     listado.Remove(PersonaSelect);
                     PersonaSelect = null;
                 }
             }
             
         }
-
 
         /// <summary>
         /// Funcion que determina si se habilita o no el boton de eliminar al pulsar sobre una persona
@@ -111,16 +108,9 @@ namespace Ejercicio01UI.ViewModels
         /// </summary>
         public void BuscaPersona()
         {
-            listado.Clear();
-            //Listado = new ObservableCollection<ClsPersona>(ClsListadoBL.GetListadoPersonasBusquedaBL(Busqueda));
+            listado = new ObservableCollection<ClsPersona>(ClsListadoBL.GetListadoPersonasBusquedaBL(busqueda));
 
-            if(Busqueda != null)
-            {
-                foreach (ClsPersona persona in ClsListadoBL.GetListadoPersonasBusquedaBL(Busqueda))
-                {
-                    listado.Add(persona);
-                }
-            }
+            NotifyPropertyChanged("Listado");
         }
 
         /// <summary>
@@ -129,7 +119,7 @@ namespace Ejercicio01UI.ViewModels
         /// <returns>Booleano que habilita o no el boton de busqueda</returns>
         public bool PuedeBuscarPersona()
         {
-            return !string.IsNullOrEmpty(Busqueda);
+            return !string.IsNullOrEmpty(busqueda);
         }
 
         #endregion

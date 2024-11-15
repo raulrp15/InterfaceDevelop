@@ -33,6 +33,11 @@ namespace CapaDAL
             return lista;
         }
 
+        /// <summary>
+        /// Funciones que devuelve una lista filtrada por la busqueda del usuario
+        /// </summary>
+        /// <param name="busqueda">Cadena con la busqueda realizada</param>
+        /// <returns>Lista de personas filtradas por busqueda</returns>
         public static List<ClsPersona> GetListadoPersonasBusquedaDAL(string busqueda) 
         {
             List<ClsPersona> busquedaList = new List<ClsPersona>();

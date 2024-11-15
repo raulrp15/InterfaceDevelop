@@ -24,11 +24,6 @@ namespace Ejercicio01UI.ViewModels
         public ObservableCollection<ClsPersona> Listado 
         { 
             get { return listado; } 
-            set 
-            {
-                listado = value;
-                NotifyPropertyChanged("Listado");
-            } 
         }
         public ClsPersona PersonaSelect 
         { 
@@ -51,7 +46,7 @@ namespace Ejercicio01UI.ViewModels
                     listado.Clear();
                     foreach (ClsPersona persona in ClsListadoBL.GetListadoPersonaBL())
                     {
-                        Listado.Add(persona);
+                        listado.Add(persona);
                     }
                 }
                 NotifyPropertyChanged("Busqueda");
@@ -62,6 +57,10 @@ namespace Ejercicio01UI.ViewModels
         public DelegateCommand BusquedaCommand { get; }
         #endregion
 
+        #region Constructores
+        /// <summary>
+        /// Constructor que rellena el listado de persona y genera los comandos de la vista
+        /// </summary>
         public ListadoPersonaVM()
         {
             try
@@ -76,10 +75,11 @@ namespace Ejercicio01UI.ViewModels
             EliminarCommand = new DelegateCommand(EliminaPersonaSelect, PuedeEliminarPersonaSelect);
             BusquedaCommand = new DelegateCommand(BuscaPersona, PuedeBuscarPersona);
         }
+        #endregion
 
         #region Funciones
         /// <summary>
-        /// 
+        /// Funcion que desplega una alerta y si es true se borra la persona de la lista
         /// </summary>
         public async void EliminaPersonaSelect()
         {
@@ -98,35 +98,35 @@ namespace Ejercicio01UI.ViewModels
 
 
         /// <summary>
-        /// 
+        /// Funcion que determina si se habilita o no el boton de eliminar al pulsar sobre una persona
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Booleano para habilitar o deshabilitar el boton</returns>
         public bool PuedeEliminarPersonaSelect()
         {
             return PersonaSelect != null;
         }
 
         /// <summary>
-        /// 
+        /// Funcion que desplega una lista segun la busqueda que haya realiazado el usuario
         /// </summary>
         public void BuscaPersona()
         {
-            Listado.Clear();
+            listado.Clear();
             //Listado = new ObservableCollection<ClsPersona>(ClsListadoBL.GetListadoPersonasBusquedaBL(Busqueda));
 
             if(Busqueda != null)
             {
                 foreach (ClsPersona persona in ClsListadoBL.GetListadoPersonasBusquedaBL(Busqueda))
                 {
-                    Listado.Add(persona);
+                    listado.Add(persona);
                 }
             }
         }
 
         /// <summary>
-        /// 
+        /// Funcion que determina si se habilita o no el boton de busqueda
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Booleano que habilita o no el boton de busqueda</returns>
         public bool PuedeBuscarPersona()
         {
             return !string.IsNullOrEmpty(Busqueda);

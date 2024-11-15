@@ -1,0 +1,36 @@
+﻿CAPA ENT:
+	// Se crea una clase que contiene las propiedades de la persona
+	ClsPersona:
+		- string nombre
+        - string apellidos
+        - DateTime fecha_nac
+        - string url_foto
+        - string direccion
+        - string telefono
+
+CAPA DAL:
+    // Se crea una clase que creará un listado de personas
+    ClsListadoDAL:
+        // Devuelve una lista completa de las personas que se encuentran en la BD
+        + static List<ClsPersona> GetListadoPersonaDAL()
+        // Devuelve una lista de todas las personas que contiene en su nombre o apellido la busqueda que se ha realizado
+        + static List<ClsPersona> GetListadoPorBusquedaDAL(string Busqueda)
+
+CAPA BL:
+    // Se crea una clase que creará un listado con normativas de la empresa a partir del listado de la capa dal
+    ClsListadoBL:
+        // Devuelve una lista, dependiendo de la normativa de la empresa, de las personas que se encuentran en la BD
+        + static List<ClsPersona> GetListadoPersonaBL()
+        // Devuelve una lista de todas las personas que contiene en su nombre o apellido la busqueda que se ha realizado
+        + static List<ClsPersona> GetListadoPorBusquedaBL(string Busqueda)
+
+CAPA UI:
+    // Se crea una clase que servirá de modelo de la vista para tener lo necesario para su ejecucion
+	ListadoPersonaVM:
+        - ObservableCollection<ClsPersona> listado {get;}
+        - ClsPersona persona_select {get; set;}
+        - string busqueda {get; set;}
+        // Se crea un comando para eliminar una persona de la lista, pero solo se habilitará si hay una persona seleccionada
+        public DelegateCommand EliminarCommand { get; }
+        // Se crea un comando para filtrar la lista segun la busqueda realizada, solo se habilitará si el entry no está vacio
+        public DelegateCommand BusquedaCommand { get; }

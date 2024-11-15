@@ -24,10 +24,10 @@ namespace CapaBL
         }
 
         /// <summary>
-        /// 
+        /// Funcion que devuelve una lista filtrada por la busqueda
         /// </summary>
-        /// <param name="busqueda"></param>
-        /// <returns></returns>
+        /// <param name="busqueda">Cadena con la busqueda realizada</param>
+        /// <returns>Lista de personas filtradras</returns>
         public static List<ClsPersona> GetListadoPersonasBusquedaBL(string busqueda)
         {
             return ClsListadoDAL.GetListadoPersonasBusquedaDAL(busqueda);

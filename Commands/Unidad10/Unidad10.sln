@@ -5,11 +5,13 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio01UI", "Ejercicio01UI\Ejercicio01UI.csproj", "{5B89CDF2-8577-4BDF-BA63-5BAE2B36F168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDAL", "CapaDAL\CapaDAL.csproj", "{4D7E049B-C00C-49F3-BDC9-A7D8DC67A080}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaDAL", "CapaDAL\CapaDAL.csproj", "{4D7E049B-C00C-49F3-BDC9-A7D8DC67A080}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaENT", "CapaENT\CapaENT.csproj", "{5B0EDCE4-1020-4AD7-B90E-BF74F2BBAE00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaENT", "CapaENT\CapaENT.csproj", "{5B0EDCE4-1020-4AD7-B90E-BF74F2BBAE00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaBL", "CapaBL\CapaBL.csproj", "{30AD9C01-4ADC-49F7-A97F-501E8697C530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaBL", "CapaBL\CapaBL.csproj", "{30AD9C01-4ADC-49F7-A97F-501E8697C530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio02UI", "Ejercicio02UI\Ejercicio02UI.csproj", "{5F16D97A-45A4-46B8-9D68-A104D6862019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,12 @@ Global
 		{30AD9C01-4ADC-49F7-A97F-501E8697C530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30AD9C01-4ADC-49F7-A97F-501E8697C530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30AD9C01-4ADC-49F7-A97F-501E8697C530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F16D97A-45A4-46B8-9D68-A104D6862019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F16D97A-45A4-46B8-9D68-A104D6862019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F16D97A-45A4-46B8-9D68-A104D6862019}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5F16D97A-45A4-46B8-9D68-A104D6862019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F16D97A-45A4-46B8-9D68-A104D6862019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F16D97A-45A4-46B8-9D68-A104D6862019}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,33 @@
+﻿CAPA ENT
+	clsCandidato:
+		+ int Id {get; set}
+		+ string Nombre {get; set}
+
+CAPA DAL
+	clsListado:
+		+ static List<clsCandidato> getListadoCandidatosDAL()
+
+CAPA BL
+	clsListadoBL:
+		+ static List<clsCandidato> getCandidatoElegidoBL(int numRondas)
+		+ static List<clsCandidato> getCandidatosPregunta(int opciones, int id)
+
+CAPA UI
+	mdlCandidatoConFoto : clsCandidato
+		+ string Foto {get; }
+
+		- string asignarFoto()
+
+	mdlPregunta:
+		+ mdlCandidatoConFoto CandidatoAdivinar {get; }
+		+ List<clsCandidato> OpcionesCandidato {get; }
+		+ clsCandidato CandidatoSeleccionado {get; set;}
+		+ bool acierto {get; }
+
+	VMJuegoPreguntas:
+		- List<mdlPregunta> listaPreguntas
+
+		+ mdlPregunta PreguntaActual {get;}
+		+ int Aciertos {get;}
+		+ int Fallidos {get;}
+		+ clsCandidato CandidatoSeleccionado {get; set;}

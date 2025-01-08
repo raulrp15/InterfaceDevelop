@@ -5,11 +5,11 @@ namespace DAL
 {
     public class Services
     {
-        public async Task<List<clsPokemon>> getPokemons()
+        public async Task<List<clsPokemon>> getPokemons(int pokFirst, int pokLast)
         {
             string miCadenaUrl = clsUriBase.getUriBase();
 
-            Uri miUri = new Uri($"{miCadenaUrl}");
+            Uri miUri = new Uri($"{miCadenaUrl}?limit={pokLast}&offset={pokFirst}");
 
             List<clsPokemon> listadoPersonas = new List<clsPokemon>();
 

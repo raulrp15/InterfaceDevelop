@@ -4,12 +4,12 @@
     {
         #region Atributos
         private string nombre;
-        private string tipo1;
-        private string tipo2;
         #endregion
         #region Propiedades
+        public string Nombre { get { return nombre; } set { nombre = value; } }
         #endregion
         #region Constructores
+        public clsPokemon() { }
         #endregion
     }
 }

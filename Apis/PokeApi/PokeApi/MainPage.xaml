@@ -1,14 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vmodel="clr-namespace:PokeApi.ViewModels"
              x:Class="PokeApi.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
+    <ContentPage.BindingContext>
+        <vmodel:vmListaPokemon/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            
-        </VerticalStackLayout>
-    </ScrollView>
+        <HorizontalStackLayout>
+            <Entry Text="{Binding FirstPok}" Placeholder="No. Pokemon para iniciar" />
+            <Entry Text="{Binding LastPok}" Placeholder="No. Pokemons de la lista" />
+            <Button Text="Buscar" Command="{Binding BuscarCommand}" IsEnabled="{Binding BuscarCommand.CanExecute}"/>
+        </HorizontalStackLayout>
+        <ScrollView>
+            <ListView ItemsSource="{Binding ListaPokemons}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout Padding="10">
+                                <Label Text="{Binding Nombre}" FontSize="Medium"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </VerticalStackLayout>
+    
 
 </ContentPage>

@@ -8,6 +8,6 @@ namespace DAL
 {
     public class clsUriBase
     {
-        public static string getUriBase() { return "https://pokeapi.co/api/v2/pokemon/"; }
+        public static string getUriBase() { return "https://pokeapi.co/api/v2/pokemon"; }
     }
 }

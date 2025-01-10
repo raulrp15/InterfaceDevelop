@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ENT
+﻿namespace DTO
 {
     public class clsApiResponse
     {
@@ -20,3 +14,4 @@ namespace ENT
         public string Url { get; set; }
     }
 }
+

@@ -1,4 +1,5 @@
 ﻿using ENT;
+using DTO;
 using Newtonsoft.Json;
 
 namespace DAL

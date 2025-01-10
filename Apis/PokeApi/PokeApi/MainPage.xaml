@@ -12,8 +12,8 @@
             Padding="30,0"
             Spacing="25">
         <HorizontalStackLayout>
-            <Entry Text="{Binding FirstPok}" Placeholder="No. Pokemon para iniciar" />
-            <Entry Text="{Binding LastPok}" Placeholder="No. Pokemons de la lista" />
+            <Entry Text="{Binding FirstPok}" Placeholder="No. Pokemon para iniciar" Keyboard="Numeric"/>
+            <Entry Text="{Binding LastPok}" Placeholder="No. Pokemons de la lista" Keyboard="Numeric"/>
             <Button Text="Buscar" Command="{Binding BuscarCommand}" IsEnabled="{Binding BuscarCommand.CanExecute}"/>
         </HorizontalStackLayout>
         <ScrollView>

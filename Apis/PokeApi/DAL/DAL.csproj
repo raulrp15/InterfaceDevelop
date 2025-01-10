@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ENT\ENT.csproj" />
+    <ProjectReference Include="..\Models\DTO.csproj" />
   </ItemGroup>
 
 </Project>

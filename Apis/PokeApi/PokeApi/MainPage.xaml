@@ -22,7 +22,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <HorizontalStackLayout Padding="10">
-                                <Label Text="{Binding Nombre}" FontSize="Medium"/>
+                                <Label Text="{Binding Name}" FontSize="Medium"/>
                             </HorizontalStackLayout>
                         </ViewCell>
                     </DataTemplate>

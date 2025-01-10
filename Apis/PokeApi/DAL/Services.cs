@@ -37,13 +37,7 @@ namespace DAL
                     textoJsonRespuesta = await mihttpClient.GetStringAsync(miUri);
                     var response = JsonConvert.DeserializeObject<clsApiResponse>(textoJsonRespuesta);
 
-                    foreach (var item in response.Results)
-                    {
-                        listadoPokemons.Add(new clsPokemon
-                        {
-                            Nombre = char.ToUpper(item.Name[0]) + item.Name.Substring(1).ToLower(),
-                        });
-                    }
+                    listadoPokemons = response.Results.ToList();
                 }
             }
             catch (Exception ex)

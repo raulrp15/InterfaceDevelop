@@ -13,40 +13,34 @@ namespace PersonasApi.ViewModels
         private List<mdlPersonaEdad> listadoPersonasEdad;
         private bool isLoading;
         private DelegateCommand loadCommand;
+        private string apellidoPersona;
         
         public List<mdlPersonaEdad> ListadoPersonasEdad { get { return listadoPersonasEdad; } }
         public bool IsLoading { get { return isLoading; } }
         public DelegateCommand LoadCommand { get { return loadCommand; } }
+        public string ApellidoPersona { get { return apellidoPersona; } }
 
         public vmListaPersonas()
         {
+            listadoPersonasEdad = new List<mdlPersonaEdad>();
             loadCommand = new DelegateCommand(cargarExecute);
             isLoading = false;
+            cargarExecute();
         }
 
         private async void cargarExecute()
         {
-            await cargarListado();
-        }
-
-        private async Task cargarListado()
-        {
             isLoading = true;
             NotifyPropertyChanged(nameof(IsLoading));
-            if (listadoPersonasEdad != null)
-            {
-                listadoPersonasEdad.Clear();
-            }
-            else
-            {
-                listadoPersonasEdad = new List<mdlPersonaEdad>();
-            }
+            listadoPersonasEdad.Clear();
             listadoPersonas = await Services.getPersonas();
             foreach (var p in listadoPersonas)
             {
                 listadoPersonasEdad.Add(new mdlPersonaEdad(p));
             }
             isLoading = false;
+            apellidoPersona = ListadoPersonasEdad[9].Persona.Apellidos;
+            NotifyPropertyChanged(nameof(ApellidoPersona));
             NotifyPropertyChanged(nameof(IsLoading));
             NotifyPropertyChanged(nameof(ListadoPersonasEdad));
         }

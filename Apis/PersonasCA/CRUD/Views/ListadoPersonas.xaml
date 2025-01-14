@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PersonasApi.Views.ListadoPersonas"
-             xmlns:vmodel="clr-namespace:PersonasApi.ViewModels"
+             x:Class="CRUD.Views.ListadoPersonas"
+             xmlns:vmodel="clr-namespace:CRUD.ViewModels"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="ListadoPersonas">
     <ContentPage.BindingContext>
@@ -10,7 +10,7 @@
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="30" Padding="15">
 
             <Button Text="Cargar Personas" Command="{Binding LoadCommand}" />
 
@@ -20,24 +20,19 @@
                            VerticalOptions="Center"/>
 
 
-            <ListView ItemsSource="{Binding ListadoPersonasEdad}" 
-              VerticalOptions="FillAndExpand" 
-              HeightRequest="300">
+            <ListView ItemsSource="{Binding ListadoPersonasEdad}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Persona.Nombre}" FontSize="16" />
-                                <Label Text="{Binding Edad}" FontSize="14" TextColor="Gray" />
+                                <Label Text="{Binding Persona.Nombre}" FontSize="16"/>
+                                <Label Text="{Binding Edad}" FontSize="14" TextColor="Gray"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
-
-
-            <Label Text="{Binding ApellidoPersona}"/>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

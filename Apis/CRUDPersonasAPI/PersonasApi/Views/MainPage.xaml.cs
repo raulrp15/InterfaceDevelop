@@ -1,4 +1,4 @@
-﻿namespace PersonasApi
+﻿namespace PersonasApi.Views
 {
     public partial class MainPage : ContentPage
     {

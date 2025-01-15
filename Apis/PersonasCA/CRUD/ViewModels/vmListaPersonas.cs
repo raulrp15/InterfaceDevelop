@@ -13,16 +13,19 @@ namespace CRUD.ViewModels
         private ObservableCollection<clsPersona> listadoPersonas;
         private ObservableCollection<mdlPersonaEdad> listadoPersonasEdad;
         private bool isLoading;
-        private DelegateCommand loadCommand;
+        private DelegateCommand insertCommand;
+        private mdlPersonaEdad personaSelect;
+        private clsPersona persona;
         
         public ObservableCollection<mdlPersonaEdad> ListadoPersonasEdad { get { return listadoPersonasEdad; } }
         public bool IsLoading { get { return isLoading; } }
-        public DelegateCommand LoadCommand { get { return loadCommand; } }
+        public DelegateCommand InsertCommand { get { return insertCommand; } }
+        public mdlPersonaEdad PersonaSelect { get { return personaSelect; } set { personaSelect = value; insertCommand.RaiseCanExecuteChanged(); } }
 
         public vmListaPersonas()
         {
             listadoPersonasEdad = new ObservableCollection<mdlPersonaEdad>();
-            loadCommand = new DelegateCommand(cargarExecute);
+            insertCommand = new DelegateCommand(insertarExecute);
             isLoading = false;
             cargarExecute();
         }
@@ -40,6 +43,11 @@ namespace CRUD.ViewModels
             isLoading = false;
             NotifyPropertyChanged(nameof(IsLoading));
             NotifyPropertyChanged(nameof(ListadoPersonasEdad));
+        }
+
+        private async void insertarExecute()
+        {
+            await Shell.Current.GoToAsync("///Insertar");
         }
 
         #region Notify

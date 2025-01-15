@@ -9,25 +9,34 @@
         <vmodel:vmListaPersonas/>
     </ContentPage.BindingContext>
 
-    <ScrollView>
+    <ScrollView BackgroundColor="White">
         <VerticalStackLayout Spacing="30" Padding="15">
 
-            <Button Text="Cargar Personas" Command="{Binding LoadCommand}" />
+            <Button Text="Nuevo➕" BackgroundColor="LightGreen" TextColor="#222222" Command="{Binding InsertCommand}" />
 
             <ActivityIndicator IsRunning="{Binding IsLoading}" 
                            IsVisible="{Binding IsLoading}" 
                            HorizontalOptions="Center" 
-                           VerticalOptions="Center"/>
+                           VerticalOptions="Center"
+                           Color="Black"
+                               MinimumWidthRequest="100"
+                               MinimumHeightRequest="100"/>
 
 
             <ListView ItemsSource="{Binding ListadoPersonasEdad}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Persona.Nombre}" FontSize="16"/>
-                                <Label Text="{Binding Edad}" FontSize="14" TextColor="Gray"/>
-                            </StackLayout>
+                            <Frame BackgroundColor="#88222222" Margin="4">
+                                <StackLayout Orientation="Horizontal" Spacing="5">
+                                    <Border Stroke="#222222" StrokeShape="RoundRectangle 30,30,30,30" StrokeThickness="2" BackgroundColor="LightBlue" HorizontalOptions="Start" VerticalOptions="Center">
+                                        <Image Source="{Binding Persona.Foto}"  HeightRequest="50" WidthRequest="50" Aspect="AspectFill"></Image>
+                                    </Border>
+                                    <Label Text="{Binding Persona.Nombre}" FontSize="16" VerticalTextAlignment="Center" TextColor="White"/>
+                                    <Label Text="{Binding Edad}" FontSize="14" VerticalTextAlignment="Center" TextColor="LightGray"/>
+                                </StackLayout>
+                            </Frame>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

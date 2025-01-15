@@ -5,6 +5,7 @@ namespace DAL
 {
     public class Services
     {
+        #region Personas
         /// <summary>
         /// Funcion asincrona que un listado de todas las personas de la api de azure
         /// Pre: Ninguna
@@ -15,7 +16,7 @@ namespace DAL
         {
             string miCadenaUrl = clsUriBase.getUriBase();
 
-            Uri miUri = new Uri(miCadenaUrl);
+            Uri miUri = new Uri($"{miCadenaUrl}PersonaApi");
 
             List<clsPersona> listadoPersonas = new List<clsPersona>();
 
@@ -52,7 +53,7 @@ namespace DAL
         {
             string miCadenaUrl = clsUriBase.getUriBase();
 
-            Uri miUri = new Uri($"{miCadenaUrl}/{id}");
+            Uri miUri = new Uri($"{miCadenaUrl}PersonaApi/{id}");
 
             clsPersona persona = null;
 
@@ -80,11 +81,18 @@ namespace DAL
             return persona;
         }
 
+        /// <summary>
+        /// Funcion asincrona que inserta una persona en la base de datos mediante la api
+        /// Pre: Todos los campos de la persona deben estar bien formados
+        /// Post: Ninguna
+        /// </summary>
+        /// <param name="persona">Persona para insertar en la BD</param>
+        /// <returns>Devuelve una respuesta de codigo de estado</returns>
         public static async Task<System.Net.HttpStatusCode> insertPersona(clsPersona persona)
         {
             string miCadenaUrl = clsUriBase.getUriBase();
 
-            Uri miUri = new Uri($"{miCadenaUrl}");
+            Uri miUri = new Uri($"{miCadenaUrl}PersonaApi");
 
 
             HttpClient mihttpClient;
@@ -108,6 +116,81 @@ namespace DAL
             }
             return miCodigoRespuesta.StatusCode;
         }
+        #endregion
+
+        #region Departamentos
+
+        public static async Task<List<clsDepartamento>> getDepartamentos()
+        {
+            string miCadenaUrl = clsUriBase.getUriBase();
+
+            Uri miUri = new Uri($"{miCadenaUrl}DepartamentoApi");
+
+            List<clsDepartamento> listadoDepts = new();
+
+            HttpClient mihttpClient;
+
+            HttpResponseMessage miCodigoRespuesta;
+
+            string textoJsonRespuesta;
+
+            mihttpClient = new HttpClient();
+            try
+            {
+                miCodigoRespuesta = await mihttpClient.GetAsync(miUri);
+                if (miCodigoRespuesta.IsSuccessStatusCode)
+                {
+                    textoJsonRespuesta = await mihttpClient.GetStringAsync(miUri);
+                    var response = JsonConvert.DeserializeObject<List<clsDepartamento>>(textoJsonRespuesta);
+                    listadoDepts = response.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listadoDepts;
+        }
+
+        /// <summary>
+        /// Funcion asincrona que recoge un departamento de la API mediante su ID
+        /// Pre: El departamento debe existir en la BD
+        /// Post: Ninguna
+        /// </summary>
+        /// <param name="id">Identificador del departamento</param>
+        /// <returns>Devuelve un departamento de la BD</returns>
+        public static async Task<clsDepartamento> getDepartamentoID(int id)
+        {
+            string miCadenaUrl = clsUriBase.getUriBase();
+
+            Uri miUri = new Uri($"{miCadenaUrl}DepartamentoApi/{id}");
+
+            clsDepartamento dept = null;
+
+            HttpClient mihttpClient;
+
+            HttpResponseMessage miCodigoRespuesta;
+
+            string textoJsonRespuesta;
+
+            mihttpClient = new HttpClient();
+            try
+            {
+                miCodigoRespuesta = await mihttpClient.GetAsync(miUri);
+                if (miCodigoRespuesta.IsSuccessStatusCode)
+                {
+                    textoJsonRespuesta = await mihttpClient.GetStringAsync(miUri);
+                    var response = JsonConvert.DeserializeObject<clsDepartamento>(textoJsonRespuesta);
+                    dept = response;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dept;
+        }
+        #endregion
     }
 }
 

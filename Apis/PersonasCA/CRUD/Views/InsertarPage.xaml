@@ -19,7 +19,15 @@
             <Image Source="{Binding Foto}"/>
         </HorizontalStackLayout>
         <DatePicker Date="{Binding Fecha}" MinimumDate="01/01/1920"/>
-        <Picker SelectedIndex="1" MinimumWidthRequest="400"/>
-        <Button Text="Añadir" Command="{Binding AddCommand}"/>
+        <HorizontalStackLayout Spacing="20">
+            <Picker ItemsSource="{Binding ListaDept}" SelectedItem="{Binding DepartSelect}" ItemDisplayBinding="{Binding Nombre}" MinimumWidthRequest="400"/>
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Color="White"/>
+        </HorizontalStackLayout>
+        
+        <Button Text="Añadir" Command="{Binding AddCommand}" CommandParameter="{Binding AddCommand.CanExecute}"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DAL;
 using CommunityToolkit.Maui.Core;
+using System.Collections.ObjectModel;
 
 namespace CRUD.ViewModels
 {
@@ -17,24 +18,49 @@ namespace CRUD.ViewModels
         private string direccion;
         private DateTime fecha;
         private clsPersona persona;
+        private ObservableCollection <clsDepartamento> listaDept;
+        private clsDepartamento departSelect;
         private DelegateCommand addCommand;
         private DelegateCommand updateCommand;
+        private bool isLoading = false;
 
+        public bool IsLoading { get { return isLoading; } }
         public DelegateCommand AddCommand { get { return addCommand; } }
         public DelegateCommand UpdateCommand { get { return updateCommand; } }
+        public ObservableCollection<clsDepartamento> ListaDept { get { return listaDept; } }
+        public clsDepartamento DepartSelect { get { return departSelect; } set { departSelect = value; addCommand.RaiseCanExecuteChanged(); } }
         public string Nombre { get { return nombre; } set { nombre = value; addCommand.RaiseCanExecuteChanged(); } }
         public string Apellido { get { return apellido; } set { apellido = value; addCommand.RaiseCanExecuteChanged(); } }
         public string Telefono { get { return telefono; } set { telefono = value; addCommand.RaiseCanExecuteChanged(); } }
-        public string Foto { get { return foto; } set { foto = value; addCommand.RaiseCanExecuteChanged(); NotifyPropertyChanged(nameof(Foto)); } }
+        public string Foto { get { return foto; } set { foto = value; addCommand.RaiseCanExecuteChanged();} }
         public DateTime Fecha { get { return fecha; } set { fecha = value; addCommand.RaiseCanExecuteChanged(); } }
         public string Direccion { get { return direccion; } set { direccion = value; addCommand.RaiseCanExecuteChanged(); } }
         public clsPersona Persona { get { return persona; } set { persona = value; NotifyPropertyChanged(nameof(Persona)); } }
 
         public vmEdInsPersona()
         {
+            listaDept = new ObservableCollection<clsDepartamento>();
             persona = new clsPersona();
             addCommand = new DelegateCommand(addExecute, addCanExecute);
             updateCommand = new DelegateCommand(updateExecute);
+            listarDepartamentos();
+            
+        }
+
+        private async void listarDepartamentos()
+        {
+            isLoading = false;
+            NotifyPropertyChanged(nameof(IsLoading));
+            listaDept.Clear();
+            var depts = await Services.getDepartamentos();
+            foreach (var d in depts) 
+            {
+                listaDept.Add(d);
+            }
+            isLoading = true;
+            NotifyPropertyChanged(nameof(IsLoading));
+            NotifyPropertyChanged(nameof(ListaDept));
+
         }
 
         private async void addExecute()
@@ -48,6 +74,7 @@ namespace CRUD.ViewModels
                 persona.Telefono = telefono;
                 persona.Direccion = direccion;
                 persona.FechaNacimiento = fecha;
+                persona.IdDepartamento = departSelect.Id;
                 await Services.insertPersona(persona);
                 await Shell.Current.GoToAsync("///Listado");
             }
@@ -60,7 +87,7 @@ namespace CRUD.ViewModels
         private bool addCanExecute()
         {
             bool add = false;
-            if (nombre != null && apellido != null && telefono != null && direccion != null)
+            if (nombre != null && apellido != null && telefono != null && direccion != null && departSelect != null)
             {
                 add = true;
             }

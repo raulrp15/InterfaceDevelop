@@ -4,7 +4,7 @@
     {
         public static string getUriBase()
         {
-            return "https://raulcrudapi.azurewebsites.net/api/personaapi";
+            return "https://raulcrudapi.azurewebsites.net/api/";
         }
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD.Views.UpdatePage"
+             xmlns:vmodel="clr-namespace:CRUD.ViewModels"
+             Title="UpdatePage">
+
+    <ContentPage.BindingContext>
+        <vmodel:vmEdInsPersona/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+        <Entry Text="{Binding Persona.Nombre}" Placeholder="Nombre" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
+        <Entry Text="{Binding Persona.Apellidos}" Placeholder="Apellidos" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
+        <Entry Text="{Binding Persona.Direccion}" Placeholder="Dirección" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
+        <Entry Text="{Binding Persona.Telefono}" Placeholder="Teléfono" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
+        <Entry Text="{Binding Persona.Foto}" Placeholder="Foto" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
+        <DatePicker Date="{Binding Persona.FechaNacimiento}" MinimumDate="01/01/1920"/>
+        <Picker ItemsSource="{Binding ListaDept}" SelectedItem="{Binding DepartSelect}" ItemDisplayBinding="{Binding Nombre}" MinimumWidthRequest="400"/>
+        <Button Text="Añadir" Command="{Binding UpdateCommand}" CommandParameter="{Binding UpdateCommand.CanExecute}"/>
+    </VerticalStackLayout>
+
+</ContentPage>

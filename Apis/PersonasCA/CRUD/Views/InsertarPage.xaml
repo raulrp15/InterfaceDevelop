@@ -14,20 +14,9 @@
         <Entry Text="{Binding Apellido}" Placeholder="Apellidos" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
         <Entry Text="{Binding Direccion}" Placeholder="Dirección" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
         <Entry Text="{Binding Telefono}" Placeholder="Teléfono" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
-        <HorizontalStackLayout>
-            <Entry Text="{Binding Foto}" Placeholder="Foto" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
-            <Image Source="{Binding Foto}"/>
-        </HorizontalStackLayout>
+        <Entry Text="{Binding Foto}" Placeholder="Foto" MinimumWidthRequest="400" HorizontalTextAlignment="Center"/>
         <DatePicker Date="{Binding Fecha}" MinimumDate="01/01/1920"/>
-        <HorizontalStackLayout Spacing="20">
-            <Picker ItemsSource="{Binding ListaDept}" SelectedItem="{Binding DepartSelect}" ItemDisplayBinding="{Binding Nombre}" MinimumWidthRequest="400"/>
-            <ActivityIndicator IsRunning="{Binding IsLoading}"
-                               IsVisible="{Binding IsLoading}"
-                               WidthRequest="50"
-                               HeightRequest="50"
-                               Color="White"/>
-        </HorizontalStackLayout>
-        
+        <Picker ItemsSource="{Binding ListaDept}" SelectedItem="{Binding DepartSelect}" ItemDisplayBinding="{Binding Nombre}" MinimumWidthRequest="400"/>
         <Button Text="Añadir" Command="{Binding AddCommand}" CommandParameter="{Binding AddCommand.CanExecute}"/>
     </VerticalStackLayout>
 </ContentPage>

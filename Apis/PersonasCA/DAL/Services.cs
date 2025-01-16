@@ -1,5 +1,6 @@
 ﻿using ENT;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace DAL
 {
@@ -88,12 +89,11 @@ namespace DAL
         /// </summary>
         /// <param name="persona">Persona para insertar en la BD</param>
         /// <returns>Devuelve una respuesta de codigo de estado</returns>
-        public static async Task<System.Net.HttpStatusCode> insertPersona(clsPersona persona)
+        public static async Task<HttpStatusCode> insertPersona(clsPersona persona)
         {
             string miCadenaUrl = clsUriBase.getUriBase();
 
             Uri miUri = new Uri($"{miCadenaUrl}PersonaApi");
-
 
             HttpClient mihttpClient;
 
@@ -116,10 +116,80 @@ namespace DAL
             }
             return miCodigoRespuesta.StatusCode;
         }
+
+        /// <summary>
+        /// Funcion asincrona que inserta una persona en la base de datos mediante la api
+        /// Pre: Todos los campos de la persona deben estar bien formados
+        /// Post: Ninguna
+        /// </summary>
+        /// <param name="persona">Persona para insertar en la BD</param>
+        /// <returns>Devuelve una respuesta de codigo de estado</returns>
+        public static async Task<HttpStatusCode> updatePersona(clsPersona persona)
+        {
+            string miCadenaUrl = clsUriBase.getUriBase();
+
+            Uri miUri = new Uri($"{miCadenaUrl}PersonaApi/{persona.Id}");
+
+            HttpClient mihttpClient;
+
+            HttpContent content;
+
+            HttpResponseMessage miCodigoRespuesta = new HttpResponseMessage();
+
+            string textoJsonRespuesta;
+
+            mihttpClient = new HttpClient();
+            try
+            {
+                var response = JsonConvert.SerializeObject(persona);
+                content = new StringContent(response, System.Text.Encoding.UTF8, "application/json");
+                miCodigoRespuesta = await mihttpClient.PutAsync(miUri, content);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return miCodigoRespuesta.StatusCode;
+        }
+
+        /// <summary>
+        /// Funcion asincrona que elimina a una persona de la API
+        /// Pre: Ninguna
+        /// Post: Ninguna
+        /// </summary>
+        /// <param name="id">Id de la persona</param>
+        /// <returns>Devuelve una respuesta de codigo de estado</returns>
+        public static async Task<HttpStatusCode> EliminarPersona(int id)
+        {
+            HttpClient mihttpClient = new HttpClient();
+
+            string miCadenaUrl = clsUriBase.getUriBase();
+
+            Uri miUri = new Uri($"{miCadenaUrl}PersonaApi/{id}");
+
+            HttpResponseMessage miRespuesta = new HttpResponseMessage();
+
+            try
+            {
+                miRespuesta = await mihttpClient.DeleteAsync(miUri);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return miRespuesta.StatusCode;
+
+        }
         #endregion
 
         #region Departamentos
 
+        /// <summary>
+        /// Funcion asincrona que recoge todos los departamentos de la API
+        /// Pre: Ninguna
+        /// Post: Ninguna
+        /// </summary>
+        /// <returns>Devuelve una lista de departamentos</returns>
         public static async Task<List<clsDepartamento>> getDepartamentos()
         {
             string miCadenaUrl = clsUriBase.getUriBase();

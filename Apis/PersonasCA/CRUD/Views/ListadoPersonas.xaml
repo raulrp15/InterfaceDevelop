@@ -9,39 +9,51 @@
         <vmodel:vmListaPersonas/>
     </ContentPage.BindingContext>
 
-    <ScrollView BackgroundColor="White">
-        <VerticalStackLayout Spacing="30" Padding="15">
+    <Grid BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollView  Grid.Column="0">
+            <VerticalStackLayout>
+                <ActivityIndicator IsRunning="{Binding IsLoading}" 
+               IsVisible="{Binding IsLoading}" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               Color="Black"
+                   MinimumWidthRequest="100"
+                   MinimumHeightRequest="100"/>
+                <ListView ItemsSource="{Binding ListadoPersonasEdad}" SelectedItem="{Binding PersonaSelect}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#88222222" Margin="4">
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Border Stroke="#222222" StrokeShape="RoundRectangle 30,30,30,30" StrokeThickness="2" BackgroundColor="LightBlue" HorizontalOptions="Start" VerticalOptions="Center">
+                                            <Image Source="{Binding Persona.Foto}"  HeightRequest="50" WidthRequest="50" Aspect="AspectFill"></Image>
+                                        </Border>
+                                        <Label Text="{Binding Persona.Nombre}" FontSize="16" VerticalTextAlignment="Center" TextColor="White"/>
+                                        <Label Text="{Binding Edad}" FontSize="14" VerticalTextAlignment="Center" TextColor="LightGray"/>
+                                    </StackLayout>
+                                </Frame>
 
-            <Button Text="Nuevo➕" BackgroundColor="LightGreen" TextColor="#222222" Command="{Binding InsertCommand}" />
-
-            <ActivityIndicator IsRunning="{Binding IsLoading}" 
-                           IsVisible="{Binding IsLoading}" 
-                           HorizontalOptions="Center" 
-                           VerticalOptions="Center"
-                           Color="Black"
-                               MinimumWidthRequest="100"
-                               MinimumHeightRequest="100"/>
-
-
-            <ListView ItemsSource="{Binding ListadoPersonasEdad}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame BackgroundColor="#88222222" Margin="4">
-                                <StackLayout Orientation="Horizontal" Spacing="5">
-                                    <Border Stroke="#222222" StrokeShape="RoundRectangle 30,30,30,30" StrokeThickness="2" BackgroundColor="LightBlue" HorizontalOptions="Start" VerticalOptions="Center">
-                                        <Image Source="{Binding Persona.Foto}"  HeightRequest="50" WidthRequest="50" Aspect="AspectFill"></Image>
-                                    </Border>
-                                    <Label Text="{Binding Persona.Nombre}" FontSize="16" VerticalTextAlignment="Center" TextColor="White"/>
-                                    <Label Text="{Binding Edad}" FontSize="14" VerticalTextAlignment="Center" TextColor="LightGray"/>
-                                </StackLayout>
-                            </Frame>
-                            
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </ScrollView>
+        <VerticalStackLayout Grid.Column="1">
+            <Border Stroke="#222222" StrokeShape="RoundRectangle 30,30,30,30" StrokeThickness="2" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+                <ImageButton Source="agregar.png" BackgroundColor="LightGreen" Command="{Binding InsertCommand}"/>
+            </Border>
+            <Border Stroke="#222222" StrokeShape="RoundRectangle 30,30,30,30" StrokeThickness="2" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+                <ImageButton Source="editar.png" BackgroundColor="LightCoral" Command="{Binding DeleteCommand}" CommandParameter="{Binding DeleteCommand.CanExecute}"/>
+            </Border>
+            <Border Stroke="#222222" StrokeShape="RoundRectangle 30,30,30,30" StrokeThickness="2" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+                <ImageButton Source="goma_de_borrar.png" BackgroundColor="LightBlue" Command="{Binding UpdateCommand}" CommandParameter="{Binding UpdateCommand.CanExecute}"/>
+            </Border>
         </VerticalStackLayout>
-    </ScrollView>
+            
+    </Grid>
 </ContentPage>

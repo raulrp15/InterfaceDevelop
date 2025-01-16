@@ -5,11 +5,13 @@ using System.Runtime.CompilerServices;
 using DAL;
 using CommunityToolkit.Maui.Core;
 using System.Collections.ObjectModel;
+using System.Net;
+using CommunityToolkit.Maui.Alerts;
 
 namespace CRUD.ViewModels
 {
     [QueryProperty(nameof(Persona), "Persona")]
-    class vmEdInsPersona
+    public class vmEdInsPersona : INotifyPropertyChanged
     {
         private string nombre;
         private string apellido;
@@ -23,6 +25,7 @@ namespace CRUD.ViewModels
         private DelegateCommand addCommand;
         private DelegateCommand updateCommand;
         private bool isLoading = false;
+        private HttpStatusCode statusCode;
 
         public bool IsLoading { get { return isLoading; } }
         public DelegateCommand AddCommand { get { return addCommand; } }
@@ -76,6 +79,14 @@ namespace CRUD.ViewModels
                 persona.FechaNacimiento = fecha;
                 persona.IdDepartamento = departSelect.Id;
                 await Services.insertPersona(persona);
+                if (statusCode == HttpStatusCode.OK)
+                {
+                    await Toast.Make($"Se ha añadido correctamente", ToastDuration.Long, 20).Show();
+                }
+                else
+                {
+                    await Toast.Make($"Error {statusCode.GetTypeCode}", ToastDuration.Long, 20).Show();
+                }
                 await Shell.Current.GoToAsync("///Listado");
             }
             catch (Exception ex)
@@ -94,11 +105,21 @@ namespace CRUD.ViewModels
             return add;
         }
 
-        public void updateExecute()
+        public async void updateExecute()
         {
             try
             {
-                Shell.Current.GoToAsync("///Listado");
+                persona.IdDepartamento = departSelect.Id;
+                statusCode = await Services.updatePersona(persona);
+                if (statusCode == HttpStatusCode.OK)
+                {
+                    await Toast.Make($"Se ha modificado correctamente", ToastDuration.Long, 20).Show();
+                }
+                else
+                {
+                    await Toast.Make($"Error {statusCode.GetTypeCode}", ToastDuration.Long, 20).Show();
+                }
+                await Shell.Current.GoToAsync("///Listado");
             }
             catch (Exception ex)
             {
